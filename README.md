@@ -26,7 +26,9 @@ In real rocks, mineral grains are frequently in contact with one another. To sep
 * **Euclidean Distance Transform (EDT):** Calculates the minimum distance from each pore/grain pixel to the nearest background/boundary.
 * **Watershed Algorithm:** Treats the distance image as a topographic relief (where distance peaks represent grain centers and boundaries represent valleys), "flooding" them to create dividing lines that separate adjacent grains.
 
-## 🔄 2.1 Pipeline Workflow
+---
+
+## 🔄 3. Pipeline Workflow
 
 ```mermaid
 graph TD
@@ -39,9 +41,7 @@ graph TD
     G --> H[Individual Grain Extraction & Porosity %]
 ```
 
----
-
-## 📐 3. Mathematical Formulas
+## 📐 4. Mathematical Formulas
 
 ### 1. Otsu's Inter-Class Variance ($\sigma_B^2$):
 The optimal threshold $t^*$ is chosen by maximizing the following equation:
@@ -63,7 +63,7 @@ Where:
 
 ---
 
-## 🛠️ 4. Technologies and Libraries Used
+## 🛠️ 5. Technologies and Libraries Used
 * **Python 3.x**
 * **NumPy:** Matrix computation and array manipulation.
 * **SciPy (`ndimage`):** Distance transform and n-dimensional matrix processing.
@@ -72,7 +72,7 @@ Where:
 
 ---
 
-## 📖 5. References
+## 📖 6. References
 
 1. **Otsu, N. (1979).** *A threshold selection method from gray-level histograms.* IEEE Transactions on Systems, Man, and Cybernetics, 9(1), 62-66.
 2. **Andrä, H., et al. (2013).** *Digital rock physics: Benchmarking computer simulations on micro-CT images.* Computers & Geosciences, 50, 25-32.
