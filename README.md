@@ -26,6 +26,19 @@ In real rocks, mineral grains are frequently in contact with one another. To sep
 * **Euclidean Distance Transform (EDT):** Calculates the minimum distance from each pore/grain pixel to the nearest background/boundary.
 * **Watershed Algorithm:** Treats the distance image as a topographic relief (where distance peaks represent grain centers and boundaries represent valleys), "flooding" them to create dividing lines that separate adjacent grains.
 
+## 🔄 2.1 Pipeline Workflow
+
+```mermaid
+graph TD
+    A[Raw Micro-CT Input Image] --> B[Gaussian Noise Pre-Filtering]
+    B --> C[Otsu's Global Thresholding]
+    C --> D[Binary Mask Generation: Pore vs. Grain]
+    D --> E[Euclidean Distance Transform EDT]
+    E --> F[Peak Local Max Feature Detection]
+    F --> G[Watershed Algorithm Segmentation]
+    G --> H[Individual Grain Extraction & Porosity %]
+```
+
 ---
 
 ## 📐 3. Mathematical Formulas
